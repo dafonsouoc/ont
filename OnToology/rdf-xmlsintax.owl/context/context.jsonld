@@ -1,0 +1,123 @@
+{
+  "@context" : {
+    "hasViewership" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasViewership",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "Tully" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tully"
+    },
+    "topDataProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topDataProperty"
+    },
+    "isRuleEnabled" : {
+      "@id" : "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"
+    },
+    "FamilyMember" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"
+    },
+    "AverageDuration" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageDuration"
+    },
+    "Title" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Title"
+    },
+    "Baratheon" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Baratheon"
+    },
+    "label" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#label"
+    },
+    "Character" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"
+    },
+    "Episode" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode"
+    },
+    "Viewership" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership"
+    },
+    "Assassin" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Assassin"
+    },
+    "Writer" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Writer"
+    },
+    "hasDuration" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasDuration",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "EpisodeCharacteristic" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic"
+    },
+    "hasKilled" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasKilled",
+      "@type" : "@id"
+    },
+    "topObjectProperty" : {
+      "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+      "@type" : "@id"
+    },
+    "LowViewership" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowViewership"
+    },
+    "HighDuration" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighDuration"
+    },
+    "Tyrell" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tyrell"
+    },
+    "howManyHasKilled" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyHasKilled",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "Lannister" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Lannister"
+    },
+    "Duration" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration"
+    },
+    "appears" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#appears",
+      "@type" : "@id"
+    },
+    "Bolton" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Bolton"
+    },
+    "seeAlso" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#seeAlso"
+    },
+    "Stark" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Stark"
+    },
+    "Targaryen" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Targaryen"
+    },
+    "hasSome" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasSome",
+      "@type" : "@id"
+    },
+    "comment" : {
+      "@id" : "http://www.w3.org/2000/01/rdf-schema#comment"
+    },
+    "howManyWriters" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyWriters",
+      "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger"
+    },
+    "HighViewership" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighViewership"
+    },
+    "LowDuration" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowDuration"
+    },
+    "Season" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season"
+    },
+    "AverageViewership" : {
+      "@id" : "http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageViewership"
+    },
+    "test" : {
+      "@id" : "https://dbpedia.org/page/Writer#test"
+    }
+  }
+}
