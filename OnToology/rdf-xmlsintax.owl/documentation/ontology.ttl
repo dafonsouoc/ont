@@ -1,0 +1,601 @@
+@prefix : <http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#> .
+
+<http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons> rdf:type owl:Ontology ;
+                                                                   rdfs:comment "Autor: Daniel Afonso Hernández" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  https://dbpedia.org/page/Writer#test
+<https://dbpedia.org/page/Writer#test> rdf:type owl:AnnotationProperty ;
+                                       rdfs:subPropertyOf rdfs:comment .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#appears
+:appears rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf owl:topObjectProperty ;
+         rdf:type owl:AsymmetricProperty ;
+         rdfs:domain :Episode ;
+         rdfs:range :Character ;
+         rdfs:comment "appears" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasKilled
+:hasKilled rdf:type owl:ObjectProperty ,
+                    owl:AsymmetricProperty ;
+           rdfs:domain :Character ;
+           rdfs:range :Character ;
+           rdfs:comment "hasKilled" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasSome
+:hasSome rdf:type owl:ObjectProperty ,
+                  owl:AsymmetricProperty ;
+         rdfs:domain :Episode ;
+         rdfs:range :EpisodeCharacteristic ;
+         rdfs:comment "hasSome" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasDuration
+:hasDuration rdf:type owl:DatatypeProperty ;
+             rdfs:subPropertyOf owl:topDataProperty ;
+             rdfs:domain :Duration ;
+             rdfs:range xsd:nonNegativeInteger ;
+             rdfs:comment "hasDuration" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasViewership
+:hasViewership rdf:type owl:DatatypeProperty ;
+               rdfs:subPropertyOf owl:topDataProperty ;
+               rdfs:domain :Viewership ;
+               rdfs:range xsd:nonNegativeInteger ;
+               rdfs:comment "hasViewership" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyHasKilled
+:howManyHasKilled rdf:type owl:DatatypeProperty ;
+                  rdfs:subPropertyOf owl:topDataProperty ;
+                  rdf:type owl:FunctionalProperty ;
+                  rdfs:domain :Character ;
+                  rdfs:range xsd:nonNegativeInteger ;
+                  rdfs:comment "howManyHasKilled" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyWriters
+:howManyWriters rdf:type owl:DatatypeProperty ;
+                rdfs:subPropertyOf owl:topDataProperty ;
+                rdfs:domain :Episode ;
+                rdfs:range xsd:nonNegativeInteger ;
+                rdfs:comment "howManyWriters" .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Assassin
+:Assassin rdf:type owl:Class ;
+          rdfs:subClassOf :Character ;
+          rdfs:comment "Personajes que son asesinos." ;
+          rdfs:label "Assassin" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageDuration
+:AverageDuration rdf:type owl:Class ;
+                 rdfs:subClassOf :Duration ;
+                 rdfs:comment "Tiene una duración media." ;
+                 rdfs:label "AverageDuration" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageViewership
+:AverageViewership rdf:type owl:Class ;
+                   rdfs:subClassOf :Viewership ;
+                   rdfs:comment "Tiene una audencia en la media." ;
+                   rdfs:label "AverageViewership" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Baratheon
+:Baratheon rdf:type owl:Class ;
+           rdfs:subClassOf :FamilyMember ;
+           rdfs:comment "Casa Baratheon" ;
+           rdfs:label "Baratheon" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Bolton
+:Bolton rdf:type owl:Class ;
+        rdfs:subClassOf :FamilyMember ;
+        rdfs:comment "Casa Bolton" ;
+        rdfs:label "Bolton" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character
+:Character rdf:type owl:Class ;
+           rdfs:comment "Personajes de la serie." ;
+           rdfs:label "Character" ;
+           rdfs:seeAlso <http://dbpedia.org/resource/List_of_Game_of_Thrones_characters> .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration
+:Duration rdf:type owl:Class ;
+          rdfs:subClassOf :EpisodeCharacteristic ;
+          rdfs:comment "Duración de un episodio." ;
+          rdfs:label "Duration" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode
+:Episode rdf:type owl:Class ;
+         rdfs:subClassOf [ rdf:type owl:Restriction ;
+                           owl:onProperty :hasSome ;
+                           owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                           owl:onClass :Duration
+                         ] ;
+         rdfs:comment "Episodio de la serie." ;
+         rdfs:label "Episode" ;
+         rdfs:seeAlso <https://dbpedia.org/ontology/episode> .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic
+:EpisodeCharacteristic rdf:type owl:Class ;
+                       rdfs:comment "Características de un episodio." ;
+                       rdfs:label "EpisodeCharacteristic" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember
+:FamilyMember rdf:type owl:Class ;
+              rdfs:subClassOf :Character ;
+              rdfs:comment "Familia a la que pertenece un personaje." ;
+              rdfs:label "FamilyMember" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighDuration
+:HighDuration rdf:type owl:Class ;
+              rdfs:subClassOf :Duration ;
+              rdfs:comment "Tiene una duración alta." ;
+              rdfs:label "HighDuration" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighViewership
+:HighViewership rdf:type owl:Class ;
+                rdfs:subClassOf :Viewership ;
+                rdfs:comment "Tiene una audiencia alta." ;
+                rdfs:label "HighViewership" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Lannister
+:Lannister rdf:type owl:Class ;
+           rdfs:subClassOf :FamilyMember ;
+           rdfs:comment "Casa Lannister" ;
+           rdfs:label "Lannister" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowDuration
+:LowDuration rdf:type owl:Class ;
+             rdfs:subClassOf :Duration ;
+             rdfs:comment "Tiene una duración baja." ;
+             rdfs:label "LowDuration" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowViewership
+:LowViewership rdf:type owl:Class ;
+               rdfs:subClassOf :Viewership ;
+               rdfs:comment "Tiene una audiencia baja." ;
+               rdfs:label "LowViewership" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season
+:Season rdf:type owl:Class ;
+        rdfs:subClassOf :EpisodeCharacteristic ;
+        rdfs:comment "Temporada a la que pertenece un episodio." ;
+        rdfs:label "Season" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Stark
+:Stark rdf:type owl:Class ;
+       rdfs:subClassOf :FamilyMember ;
+       rdfs:comment "Casa Stark" ;
+       rdfs:label "Stark" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Targaryen
+:Targaryen rdf:type owl:Class ;
+           rdfs:subClassOf :FamilyMember ;
+           rdfs:comment "Casa Targaryen" ;
+           rdfs:label "Targaryen" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Title
+:Title rdf:type owl:Class ;
+       rdfs:subClassOf :EpisodeCharacteristic ;
+       rdfs:comment "Titulo de un episodio." ;
+       rdfs:label "Title" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tully
+:Tully rdf:type owl:Class ;
+       rdfs:subClassOf :FamilyMember ;
+       rdfs:comment "Casa Tully" ;
+       rdfs:label "Tully" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tyrell
+:Tyrell rdf:type owl:Class ;
+        rdfs:subClassOf :FamilyMember ;
+        rdfs:comment "Casa Tyrell" ;
+        rdfs:label "Tyrell" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership
+:Viewership rdf:type owl:Class ;
+            rdfs:subClassOf :EpisodeCharacteristic ;
+            rdfs:comment "Audiencia de un episodio." ;
+            rdfs:label "Viewership" .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Writer
+:Writer rdf:type owl:Class ;
+        rdfs:subClassOf :EpisodeCharacteristic ;
+        rdfs:comment "Escritor que ha escrito un episodio." ;
+        rdfs:label "Writer" ;
+        rdfs:seeAlso <https://dbpedia.org/page/Writer> .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season_1
+:Season_1 rdf:type owl:NamedIndividual ,
+                   :Season .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Winter_Is_Comming
+:Winter_Is_Comming rdf:type owl:NamedIndividual ,
+                            :Title .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1-ep1
+:s1-ep1 rdf:type owl:NamedIndividual ,
+                 :Episode ;
+        :hasSome :Season_1 ,
+                 :Winter_Is_Comming ,
+                 :s1_ep1_viewership .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1_ep1_duration
+:s1_ep1_duration rdf:type owl:NamedIndividual ,
+                          :AverageDuration ;
+                 :hasDuration "62"^^xsd:positiveInteger .
+
+
+###  http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1_ep1_viewership
+:s1_ep1_viewership rdf:type owl:NamedIndividual ,
+                            :LowViewership ;
+                   :hasViewership "2220000"^^xsd:positiveInteger .
+
+
+###  https://dbpedia.org/page/Writer#Arya_Stark
+<https://dbpedia.org/page/Writer#Arya_Stark> rdf:type owl:NamedIndividual ,
+                                                      :Assassin ,
+                                                      :Character ;
+                                             :hasKilled <https://dbpedia.org/page/Writer#Meryn_Trant> ,
+                                                        <https://dbpedia.org/page/Writer#Petyr_Baelish> ;
+                                             :howManyHasKilled "2"^^xsd:nonNegativeInteger .
+
+
+###  https://dbpedia.org/page/Writer#Meryn_Trant
+<https://dbpedia.org/page/Writer#Meryn_Trant> rdf:type owl:NamedIndividual .
+
+
+###  https://dbpedia.org/page/Writer#Petyr_Baelish
+<https://dbpedia.org/page/Writer#Petyr_Baelish> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :AverageDuration
+                :HighDuration
+                :LowDuration
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( :Baratheon
+                :Bolton
+                :Lannister
+                :Stark
+                :Targaryen
+                :Tully
+                :Tyrell
+              )
+] .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+:c rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:n rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+:v rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "IsAssassin" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :howManyHasKilled ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :n ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 0 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Assassin ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :c
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AverageDuration" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDuration ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :n ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 50 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :n ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 71 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AverageDuration ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "LowDuration" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDuration ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :n ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 51 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :LowDuration ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "HighDuration" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasDuration ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :n ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 70 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighDuration ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "AverageViewership" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasViewership ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :n ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 2999999 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first :n ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 7000001 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :AverageViewership ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "LowViewership" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasViewership ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :n ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 3000000 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :LowViewership ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "" ;
+   rdfs:label "HighViewership" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#propertyPredicate> :hasViewership ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v ;
+                                                       <http://www.w3.org/2003/11/swrl#argument2> :n
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                  <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                               rdf:first :n ;
+                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                          rdf:first 7000000 ;
+                                                                                                                          rdf:rest rdf:nil
+                                                                                                                        ]
+                                                                                                             ]
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :HighViewership ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> :v
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
