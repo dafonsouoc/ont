@@ -1,0 +1,974 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons"
+     xml:base="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#"
+     xmlns:Writer="https://dbpedia.org/page/Writer#"
+     xmlns:GoT-Seasons="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons">
+        <rdfs:comment>Autor: Daniel Afonso Hernández</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- https://dbpedia.org/page/Writer#test -->
+
+    <owl:AnnotationProperty rdf:about="https://dbpedia.org/page/Writer#test">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#appears -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#appears">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">appears</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasKilled -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasKilled">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasKilled</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasSome -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasSome">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasSome</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasDuration -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasDuration">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasDuration</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasViewership -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasViewership">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">hasViewership</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyHasKilled -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyHasKilled">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">howManyHasKilled</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyWriters -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyWriters">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">howManyWriters</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Assassin -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Assassin">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Personajes que son asesinos.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Assassin</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageDuration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageDuration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiene una duración media.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AverageDuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageViewership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageViewership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiene una audencia en la media.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AverageViewership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Baratheon -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Baratheon">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Baratheon</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Baratheon</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Bolton -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Bolton">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Bolton</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Bolton</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character">
+        <rdfs:comment>Personajes de la serie.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Character</rdfs:label>
+        <rdfs:seeAlso rdf:resource="http://dbpedia.org/resource/List_of_Game_of_Thrones_characters"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duración de un episodio.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Duration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasSome"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Episodio de la serie.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Episode</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/ontology/episode"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic">
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Características de un episodio.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">EpisodeCharacteristic</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Familia a la que pertenece un personaje.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">FamilyMember</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighDuration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighDuration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiene una duración alta.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighDuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighViewership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighViewership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiene una audiencia alta.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighViewership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Lannister -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Lannister">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Lannister</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Lannister</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowDuration -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowDuration">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Duration"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiene una duración baja.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LowDuration</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowViewership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowViewership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tiene una audiencia baja.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LowViewership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Temporada a la que pertenece un episodio.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Season</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Stark -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Stark">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Stark</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stark</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Targaryen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Targaryen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Targaryen</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Targaryen</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Title -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Title">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Titulo de un episodio.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Title</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tully -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tully">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Tully</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tully</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tyrell -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tyrell">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#FamilyMember"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Casa Tyrell</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Tyrell</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Viewership">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Audiencia de un episodio.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Viewership</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Writer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Writer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#EpisodeCharacteristic"/>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Escritor que ha escrito un episodio.</rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Writer</rdfs:label>
+        <rdfs:seeAlso rdf:resource="https://dbpedia.org/page/Writer"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season_1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Winter_Is_Comming -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Winter_Is_Comming">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Title"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1-ep1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1-ep1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Episode"/>
+        <GoT-Seasons:hasSome rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Season_1"/>
+        <GoT-Seasons:hasSome rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Winter_Is_Comming"/>
+        <GoT-Seasons:hasSome rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1_ep1_viewership"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1_ep1_duration -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1_ep1_duration">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageDuration"/>
+        <GoT-Seasons:hasDuration rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">62</GoT-Seasons:hasDuration>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1_ep1_viewership -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#s1_ep1_viewership">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowViewership"/>
+        <GoT-Seasons:hasViewership rdf:datatype="http://www.w3.org/2001/XMLSchema#positiveInteger">2220000</GoT-Seasons:hasViewership>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbpedia.org/page/Writer#Arya_Stark -->
+
+    <owl:NamedIndividual rdf:about="https://dbpedia.org/page/Writer#Arya_Stark">
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Assassin"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Character"/>
+        <GoT-Seasons:hasKilled rdf:resource="https://dbpedia.org/page/Writer#Meryn_Trant"/>
+        <GoT-Seasons:hasKilled rdf:resource="https://dbpedia.org/page/Writer#Petyr_Baelish"/>
+        <GoT-Seasons:howManyHasKilled rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</GoT-Seasons:howManyHasKilled>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://dbpedia.org/page/Writer#Meryn_Trant -->
+
+    <owl:NamedIndividual rdf:about="https://dbpedia.org/page/Writer#Meryn_Trant"/>
+    
+
+
+    <!-- https://dbpedia.org/page/Writer#Petyr_Baelish -->
+
+    <owl:NamedIndividual rdf:about="https://dbpedia.org/page/Writer#Petyr_Baelish"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageDuration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighDuration"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowDuration"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Baratheon"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Bolton"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Lannister"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Stark"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Targaryen"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tully"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Tyrell"/>
+        </owl:members>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#c">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AverageDuration</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasDuration"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">71</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageDuration"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighDuration</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasDuration"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">70</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighDuration"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LowDuration</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasDuration"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">51</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowDuration"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">AverageViewership</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasViewership"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2999999</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                        <swrl:arguments>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000001</rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </swrl:arguments>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#AverageViewership"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">HighViewership</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasViewership"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7000000</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#HighViewership"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LowViewership</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#hasViewership"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3000000</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#LowViewership"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#v"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IsAssassin</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#howManyHasKilled"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#c"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThan"/>
+                                <swrl:arguments>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                        <rdf:first rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#n"/>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </swrl:arguments>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#Assassin"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/daniel/ontologies/2022/3/GoT-Seasons#c"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
